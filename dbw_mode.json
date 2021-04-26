@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "custom_mode_stringx": {
+        "type": "boolean"
+      },
+      "veh_int_internal_error": {
+        "type": "boolean"
+      },
+      "motion_control_mode": {
+        "type": "integer"
+      },
+      "safety_mode": {
+        "type": "integer"
+      },
+      "dbw_error": {
+        "type": "boolean"
+      },
+      "emo": {
+        "type": "boolean"
+      },
+      "safestop_link": {
+        "type": "integer"
+      },
+      "manual": {
+        "type": "boolean"
+      },
+      "header": {
+        "type": "object",
+        "properties": {
+          "stamp": {
+            "type": "object",
+            "properties": {
+              "secs": {
+                "type": "integer"
+              },
+              "nsecs": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "secs",
+              "nsecs"
+            ]
+          },
+          "frame_id": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "stamp",
+          "frame_id",
+          "seq"
+        ]
+      },
+      "ready_mode": {
+        "type": "integer"
+      },
+      "safestop_stop": {
+        "type": "boolean"
+      },
+      "estop_button": {
+        "type": "boolean"
+      },
+      "safestop_pause": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "custom_mode_string",
+      "veh_int_internal_error",
+      "motion_control_mode",
+      "safety_mode",
+      "dbw_error",
+      "emo",
+      "safestop_link",
+      "manual",
+      "header",
+      "ready_mode",
+      "safestop_stop",
+      "estop_button",
+      "safestop_pause"
+    ]
+  }

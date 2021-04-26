@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+ "title": "NavSatFixWithErrors",
+ "description": "location information",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer"
+        },
+        "service": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "status",
+        "service"
+      ]
+    },
+    "errors": {
+      "type": "object",
+      "properties": {
+        "error_list": {
+          "type": "array",
+          "items": {}
+        },
+        "sequence": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "error_list",
+        "sequence"
+      ]
+    },
+    "altitude": {
+      "type": "integer"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "position_covariance": {
+      "type": "array",
+      "items": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "header": {
+      "type": "object",
+      "properties": {
+        "stamp": {
+          "type": "object",
+          "properties": {
+            "secs": {
+              "type": "integer"
+            },
+            "nsecs": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "secs",
+            "nsecs"
+          ]
+        },
+        "frame_id": {
+	  "description": "The unique identifier for a product",
+          "type": "string"
+        },
+        "seq": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "stamp",
+        "frame_id",
+        "seq"
+      ]
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "position_covariance_type": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "status",
+    "errors",
+    "altitude",
+    "longitude",
+    "position_covariance",
+    "header",
+    "latitude",
+    "position_covariance_type"
+  ]
+}

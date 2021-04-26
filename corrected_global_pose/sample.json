@@ -1,0 +1,33 @@
+{
+    "status": {
+      "status": 0,
+      "service": 0
+    },
+    "errors": {
+      "error_list": [],
+      "sequence": 0
+    },
+    "altitude": 0,
+    "longitude": -88.8467930699463,
+    "position_covariance": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "header": {
+      "stamp": {
+        "secs": 1618531042,
+        "nsecs": 658354043
+      },
+      "frame_id": "",
+      "seq": 503
+    },
+    "latitude": 32.2383178834823,
+    "position_covariance_type": 0
+  }

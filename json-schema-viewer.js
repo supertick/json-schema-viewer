@@ -18,7 +18,7 @@ if (typeof JSV === 'undefined') {
          * If true, render diagram only on init, without the jQuery Mobile UI.
          * The legend and nav tools will be rendered with any event listeners.
          */
-        plain: false,
+        plain: true,
 
         /**
          * The version of the schema.
@@ -43,7 +43,7 @@ if (typeof JSV === 'undefined') {
         /**
          * The initialization status of the viewer page
          */
-        viewerInit: false,
+        viewerInit: true,
 
         /**
          * The current viewer height
@@ -719,9 +719,10 @@ if (typeof JSV === 'undefined') {
                 all.anyOf = s.anyOf;
             }
 
+            
             node = {
                 description: schema.description || s.description,
-                name: (schema.$ref && real ? name : false) || s.title || name || 'schema',
+                name: ((schema.$ref && real ? name : false) || s.title || name || 'schema'),
                 isReal: real,
                 plainName: name,
                 type: s.type,
@@ -1125,6 +1126,7 @@ if (typeof JSV === 'undefined') {
                 })
                 .on('click', JSV.click);
 
+            // main node text
             nodeEnter.append('text')
                 .attr('x', function(d) {
                     return 10;
@@ -1141,7 +1143,7 @@ if (typeof JSV === 'undefined') {
                     //return d.children || d._children ? 'end' : 'start';
                     return 'start';
                 })
-                .text(function(d) {
+                .text(function(d) {              
                     return d.name + (d.require ? '*' : '');
                 })
                 .style('fill-opacity', 0)
@@ -1152,6 +1154,12 @@ if (typeof JSV === 'undefined') {
                     d3.event.stopPropagation();
                 });
 
+                // description
+                /*
+                nodeEnter.append('text').text(function(d) {                  
+                    return (d.description ? d.description : '');
+                }).attr('class','description') //.style('fill-opacity', 0.5)
+                */
 
             // Change the circle fill depending on whether it has children and is collapsed
             node.select('.node circle')

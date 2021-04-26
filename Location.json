@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Location",
+  "properties": {
+    "class_name": {
+      "type": "string"
+    },
+    "client_username": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "altitude": {
+          "type": "integer"
+        },
+        "app_id": {
+          "type": "string"
+        },
+        "gps_time_ms": {
+          "type": "integer"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "vehicle_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "altitude",
+        "app_id",
+        "gps_time_ms",
+        "lat",
+        "lon",
+        "vehicle_id"
+      ]
+    },
+    "from_id": {
+      "type": "string"
+    },
+    "history": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "method": {
+      "type": "string"
+    },
+    "time_ms": {
+      "type": "integer"
+    },
+    "to_id": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "class_name",
+    "client_username",
+    "data",
+    "from_id",
+    "history",
+    "method",
+    "time_ms",
+    "to_id"
+  ]
+}

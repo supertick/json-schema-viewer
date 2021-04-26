@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>JSON Schema Viewer <!-- @echo version --></title>
+        <title>JSON Schema Viewer 0.3.4</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
-        <link rel="stylesheet" href="styles/json-schema-viewer<!-- @if NODE_ENV='PRODUCTION' -->.min<!-- @endif -->.css" />
+        <link rel="stylesheet" href="styles/json-schema-viewer.css" />
 
     </head>
     <body>
@@ -125,7 +125,7 @@
                     <div class="ui-block-a section">
                         <label for="textarea-json">JSON to Validate:</label>
                         <textarea cols="40" rows="15" name="textarea-json" id="textarea-json" placeholder="Enter your JSON or Drag-n-Drop a file here..."></textarea>
-                        <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/minimum_example.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
+                        <a class="load-example" href="bower_components/mdjson-schemas/examples/minimum_example.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
                     </div>
                     <div class="ui-block-b section">
                         <label for="file-upload">Upload File:</label>
@@ -217,7 +217,7 @@
                 <p>There's also a <a rel="external" href="./basic.html">basic example</a> without the jQuery Mobile interface elements.</p>
                 <hr />
                 <div id="welcome-footer">
-                    <a href="<!-- @echo homepage -->" class="ui-btn ui-btn-inline ui-icon-github ui-btn-icon-left">This project's on GitHub!</a>
+                    <a href="https://github.com/jlblcc/json-schema-viewer" class="ui-btn ui-btn-inline ui-icon-github ui-btn-icon-left">This project's on GitHub!</a>
                 </div>
             </div>
         </div>
@@ -225,7 +225,6 @@
         <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="lib/preinit.js"></script>
         <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
-        <!-- @if NODE_ENV!='PRODUCTION' -->
         <script>
           $.ajaxSetup({
             cache : false
@@ -248,10 +247,6 @@
         </script>
         <script type='text/javascript' src="lib/example.js"></script>
 
-        <!-- @endif -->
-        <!-- @if NODE_ENV='PRODUCTION' -->
-        <script type='text/javascript' src="json-schema-viewer.min.js"></script>
-        <!-- @endif -->
         asddsffd
     </body>
 </html>

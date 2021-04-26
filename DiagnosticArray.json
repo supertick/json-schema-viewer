@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            },
+            "hardware_id": {
+              "type": "string"
+            },
+            "values": {
+              "type": "array",
+              "items": {}
+            },
+            "name": {
+              "type": "string"
+            },
+            "level": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "message",
+            "hardware_id",
+            "values",
+            "name",
+            "level"
+          ]
+        }
+      ]
+    },
+    "header": {
+      "type": "object",
+      "properties": {
+        "stamp": {
+          "type": "object",
+          "properties": {
+            "secs": {
+              "type": "integer"
+            },
+            "nsecs": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "secs",
+            "nsecs"
+          ]
+        },
+        "frame_id": {
+          "type": "string"
+        },
+        "seq": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "stamp",
+        "frame_id",
+        "seq"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "header"
+  ]
+}
